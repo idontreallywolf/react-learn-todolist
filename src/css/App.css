@@ -3,6 +3,41 @@
     min-height: 200px;
     margin: 1em auto;
     border-radius: 3px;
+}
+
+.well {
+    padding: 10px;
+    border-radius: 5px;
     box-shadow: 0 0 5px var(--box-shadow);
+    margin: 2em 0px;
     background: var(--bg-primary);
 }
+
+.controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.controls > input {
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: 1px solid var(--border-input);
+    background: var(--bg-input);
+}
+
+.button {
+    padding: 0px 1em;
+    border: transparent;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.button-blue,
+.button-green,
+.button-red   { color:#fff; }
+.button-blue  { background: var(--bg-btn-blue);  }
+.button-green { background: var(--bg-btn-green); }
+.button-red   { background: var(--bg-btn-red);   }

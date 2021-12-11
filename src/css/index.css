@@ -1,12 +1,19 @@
 :root {
-    --bg-primary:  #313131;
-    --bg-secondary:#1a1919;
+    --bg-primary:  #fff;
+    --bg-secondary:#eee;
+    --bg-input: #f7f7f7;
 
-    --box-shadow: #000;
+    --box-shadow: #cecece;
+
+    --border-input:#cacaca;
+
+    --bg-btn-blue: #1470e6;
+    --bg-btn-green: #1ca400;
+    --bg-btn-red: #da2020;
 }
 
 body {
-    background: #1a1919;
+    background: var(--bg-secondary);
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,4 +25,8 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a:hover, button:hover, .link:hover, .button:hover {
+    cursor: pointer;
 }

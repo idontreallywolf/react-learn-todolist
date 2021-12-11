@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 function App() {
     /* { id: uuid, name: name, isDone: bool } */
     const [list, setList] = useState([]);
-    const todoItemName = useRef();
+    const todoItemName    = useRef();
     const localStorageKey = 'todolist';
 
     useEffect(() => {
@@ -16,9 +16,7 @@ function App() {
         }
     }, []);
 
-    useEffect(() => {
-        localStorage.setItem(localStorageKey, JSON.stringify(list));
-    }, [list]);
+    useEffect(() => localStorage.setItem(localStorageKey, JSON.stringify(list)), [list]);
 
     const actionAddItem = (e) => {
         const todoName = todoItemName.current.value;
@@ -42,11 +40,11 @@ function App() {
     return (
     <div className='App'>
         <div className='well controls'>
-            <input ref={todoItemName} type="text" placeholder="e.g: buy groceries"/>
+            <input ref={ todoItemName } type="text" placeholder="e.g: buy groceries"/>
             <div>
-                <button className='button button-blue'  onClick={actionAddItem}>Add</button>
-                <button className='button button-green' onClick={actionClearDone}>Clear Completed</button>
-                <button className='button button-red'   onClick={actionClearAll}>Clear All</button>
+                <button className='button button-blue'  onClick={ actionAddItem   }>Add</button>
+                <button className='button button-green' onClick={ actionClearDone }>Clear Completed</button>
+                <button className='button button-red'   onClick={ actionClearAll  }>Clear All</button>
             </div>
         </div>
         <div className='well'>

@@ -1,0 +1,8 @@
+.App {
+    width: 500px;
+    min-height: 200px;
+    margin: 1em auto;
+    border-radius: 3px;
+    box-shadow: 0 0 5px var(--box-shadow);
+    background: var(--bg-primary);
+}

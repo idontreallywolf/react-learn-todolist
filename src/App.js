@@ -1,12 +1,24 @@
 import './css/App.css';
 import TodoList from './TodoList';
 import { v4 as uuidv4 } from 'uuid';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function App() {
     /* { id: uuid, name: name, isDone: bool } */
     const [list, setList] = useState([]);
     const todoItemName = useRef();
+    const localStorageKey = 'todolist';
+
+    useEffect(() => {
+        const todoList = localStorage.getItem(localStorageKey);
+        if (todoList) {
+            setList(JSON.parse(todoList));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem(localStorageKey, JSON.stringify(list));
+    }, [list]);
 
     const actionAddItem = (e) => {
         const todoName = todoItemName.current.value;

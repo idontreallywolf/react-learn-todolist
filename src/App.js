@@ -19,9 +19,7 @@ function App() {
         todoItemName.current.focus();
     }
 
-    const actionClearDone = (e) => {
-        setList(list.filter(todo => !todo.isDone));
-    }
+    const actionClearDone = (e) => setList(list.filter(todo => !todo.isDone));
 
     const actionClearAll = (e) => {
         if (window.confirm('Are you sure you want to delete all items?')) {
@@ -33,9 +31,11 @@ function App() {
     <div className='App'>
         <div className='well controls'>
             <input ref={todoItemName} type="text" placeholder="e.g: buy groceries"/>
-            <button className='button button-blue'  onClick={actionAddItem}>Add</button>
-            <button className='button button-green' onClick={actionClearDone}>Clear Completed</button>
-            <button className='button button-red'   onClick={actionClearAll}>Clear All</button>
+            <div>
+                <button className='button button-blue'  onClick={actionAddItem}>Add</button>
+                <button className='button button-green' onClick={actionClearDone}>Clear Completed</button>
+                <button className='button button-red'   onClick={actionClearAll}>Clear All</button>
+            </div>
         </div>
         <div className='well'>
             <TodoList list={ list } setList={ setList }/>

@@ -1,11 +1,11 @@
 :root {
     --bg-primary:  #fff;
     --bg-secondary:#eee;
-    --bg-input: #f7f7f7;
+    --bg-input: #fdfdfd;
 
     --box-shadow: #cecece;
 
-    --border-input:#cacaca;
+    --border-input:#f4f4f4;
 
     --bg-btn-blue: #1470e6;
     --bg-btn-green: #1ca400;

@@ -15,24 +15,26 @@
 
 .controls {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .controls > input {
-    font-size: 1em;
+    font-size: 2em;
     padding: 5px;
     border-radius: 3px;
     margin-right: 5px;
     border: 1px solid var(--border-input);
     background: var(--bg-input);
+    margin-bottom: 10px;
 }
 
 .button {
-    padding: 0px 1em;
+    padding: 5px 1em;
     border: transparent;
     border-radius: 3px;
     margin-right: 5px;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .button-blue,

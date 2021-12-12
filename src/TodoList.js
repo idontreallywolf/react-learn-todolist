@@ -10,9 +10,13 @@ export default function TodoList({ list, setList }) {
         setList(_temp)
     }
 
+    const deleteItem = (id) => {
+        setList([...list].filter(todo => todo.id !== id));
+    }
+
     return (
         <div className='todo'>
-            { list.map(todo => <Todo key={ todo.id } todo={ todo } toggle={ toggle }/>) }
+            { list.map(todo => <Todo key={ todo.id } todo={ todo } toggle={ toggle } deleteItem={ deleteItem }/>) }
         </div>
     );
 }

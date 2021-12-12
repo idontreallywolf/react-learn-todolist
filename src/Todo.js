@@ -8,9 +8,7 @@ export default function Todo({ todo, toggle, deleteItem }) {
                 <div className='todo-element'>
                     <span><input type='checkbox' checked={ todo.isDone } onChange={ toggleBox }/></span>
                     <div className='todo-name'>
-                        <span>
-                            { todo.name }
-                        </span>
+                        <span>{ todo.name }</span>
                         <button onClick={ deleteTodo }>🗑</button>
                     </div>
                 </div>

@@ -30,19 +30,13 @@ function App() {
     }
 
     const actionClearDone = (e) => setList(list.filter(todo => !todo.isDone));
-
-    const actionClearAll = (e) => {
-        if (window.confirm('Are you sure you want to delete all items?')) {
-            setList([]);
-        }
-    }
-
-    const actionPressKey = (e) => (e.key === 'Enter') ? actionAddItem():'';
+    const actionClearAll  = (e) => window.confirm('Are you sure you want to delete all items?') ? setList([]) : '';
+    const actionPressKey  = (e) => (e.key === 'Enter') ? actionAddItem() : '';
 
     return (
     <div className='App'>
         <div className='well controls'>
-            <input ref={ todoItemName } onKeyUp={actionPressKey} type="text" placeholder="e.g: buy groceries"/>
+            <input ref={ todoItemName } onKeyUp={ actionPressKey } type="text" placeholder="e.g: buy groceries"/>
             <div>
                 <button className='button button-blue'  onClick={ actionAddItem   }>Add</button>
                 <button className='button button-green' onClick={ actionClearDone }>Clear Completed</button>

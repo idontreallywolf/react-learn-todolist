@@ -7,12 +7,10 @@ export default function TodoList({ list, setList }) {
         const _temp     = [...list];
         const todoItem  = _temp.find(todo => todo.id === id);
         todoItem.isDone = !todoItem.isDone;
-        setList(_temp)
+        setList(_temp);
     }
 
-    const deleteItem = (id) => {
-        setList([...list].filter(todo => todo.id !== id));
-    }
+    const deleteItem = (id) => setList([...list].filter(todo => todo.id !== id));
 
     return (
         <div className='todo'>

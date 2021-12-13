@@ -6,7 +6,7 @@ export default function Todo({ todo, toggle, deleteItem }) {
 
     return <label>
                 <div className='todo-element'>
-                    <span><input type='checkbox' checked={ todo.isDone } onChange={ toggleBox }/></span>
+                    <span class="checkbox-container"><input type='checkbox' checked={ todo.isDone } onChange={ toggleBox }/></span>
                     <div className='todo-name'>
                         <span>{ todo.name }</span>
                         <button onClick={ deleteTodo }>🗑</button>

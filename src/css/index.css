@@ -1,15 +1,19 @@
 :root {
-    --bg-primary:  #fff;
-    --bg-secondary:#eee;
-    --bg-input: #fdfdfd;
+    --bg-primary:  #323a44;
+    --bg-secondary:#cae1ff;
+    --bg-input: #363f4a;
+
+    --bg-list-element-hover: #414d5b;
 
     --box-shadow: #cecece;
 
-    --border-input:#f4f4f4;
+    --border-input:#282b2d;
 
-    --bg-btn-blue: #1470e6;
+    --bg-btn-blue: #46576c;    --bg-btn-blue-hover: #566a82;
     --bg-btn-green: #1ca400;
-    --bg-btn-red: #da2020;
+    --bg-btn-red: #913939;     --bg-btn-red-hover:  #a84f4f;
+
+    --color-input: #bfe0f2;
 }
 
 body {
@@ -26,6 +30,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*       { -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; }
+*:hover { -webkit-transition-duration:   0s; -moz-transition-duration:   0s; -o-transition-duration:   0s; transition-duration:   0s; }
 
 a:hover, button:hover, .link:hover, .button:hover {
     cursor: pointer;

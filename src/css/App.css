@@ -19,13 +19,15 @@
 }
 
 .controls > input {
-    font-size: 2em;
+    font-size: 1.7em;
     padding: 5px;
     border-radius: 3px;
     margin-right: 5px;
-    border: 1px solid var(--border-input);
-    background: var(--bg-input);
+    border: 0px;
     margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-input);
+    background: var(--bg-input);
+    color: var(--color-input);
 }
 
 .button {
@@ -43,3 +45,6 @@
 .button-blue  { background: var(--bg-btn-blue);  }
 .button-green { background: var(--bg-btn-green); }
 .button-red   { background: var(--bg-btn-red);   }
+
+.button-blue:hover  { background: var(--bg-btn-blue-hover);  }
+.button-red:hover   { background: var(--bg-btn-red-hover);   }

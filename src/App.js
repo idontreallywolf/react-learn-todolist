@@ -39,7 +39,7 @@ function App() {
             <input ref={ todoItemName } onKeyUp={ actionPressKey } type="text" placeholder="e.g: buy groceries"/>
             <div>
                 <button className='button button-blue'  onClick={ actionAddItem   }>Add</button>
-                <button className='button button-green' onClick={ actionClearDone }>Clear Completed</button>
+                <button className='button button-blue'  onClick={ actionClearDone }>Clear Completed</button>
                 <button className='button button-red'   onClick={ actionClearAll  }>Clear All</button>
             </div>
         </div>

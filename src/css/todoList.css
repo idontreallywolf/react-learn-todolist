@@ -59,3 +59,7 @@ input[type='checkbox']:checked::after {
     background: #323a44;
     border-color: transparent;
 }
+
+.todo-name ::selection {
+    background: transparent;
+}

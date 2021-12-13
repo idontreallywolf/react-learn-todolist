@@ -30,7 +30,12 @@ function App() {
     }
 
     const actionClearDone = (e) => setList(list.filter(todo => !todo.isDone));
-    const actionClearAll  = (e) => window.confirm('Are you sure you want to delete all items?') ? setList([]) : '';
+    const actionClearAll  = (e) => {
+        if (list.length === 0) {
+            return;
+        }
+        return window.confirm('Are you sure you want to delete all items?') ? setList([]) : ''
+    };
     const actionPressKey  = (e) => (e.key === 'Enter') ? actionAddItem() : '';
 
     return (
